@@ -30,3 +30,7 @@ Run with `--help` for all options.
 - `mpg.csv` — Auto MPG dataset
 - `sample.csv` — synthetic data
 - `mpg_results.png`, `mpg_math.png` — example outputs
+
+## License
+
+[MIT](LICENSE)
