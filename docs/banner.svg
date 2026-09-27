@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0f3b3a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#a3e635"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity="0.04"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="300" rx="18" fill="url(#bg)"/>
+  <rect width="1200" height="300" rx="18" fill="url(#grid)"/>
+
+  <!-- expression tree motif: (year + acc) * year^2 / weight -->
+  <g transform="translate(840 48)" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" text-anchor="middle">
+    <g stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="2" fill="none">
+      <path d="M160 22 L90 82"/><path d="M160 22 L222 70"/>
+      <path d="M90 82 L40 142"/><path d="M90 82 L140 142"/>
+      <path d="M40 142 L8 188"/><path d="M40 142 L72 188"/>
+      <path d="M140 142 L140 188"/>
+    </g>
+    <g fill="#0b1220" stroke="url(#accent)" stroke-width="2">
+      <circle cx="160" cy="22" r="20"/><circle cx="90" cy="82" r="20"/>
+      <circle cx="40" cy="142" r="20"/><circle cx="140" cy="142" r="20"/>
+    </g>
+    <g fill="#e2e8f0" dominant-baseline="central" font-weight="700">
+      <text x="160" y="22">÷</text><text x="90" y="82">×</text>
+      <text x="40" y="142">+</text><text x="140" y="142">x²</text>
+    </g>
+    <g fill="#94a3b8" dominant-baseline="central" font-size="15">
+      <text x="240" y="84">weight</text>
+      <text x="0" y="204">year</text><text x="80" y="204">acc</text><text x="140" y="204">year</text>
+    </g>
+  </g>
+
+  <g font-family="-apple-system, 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', Helvetica, Arial, sans-serif">
+    <text x="64" y="128" font-size="58" font-weight="800" fill="#f8fafc" letter-spacing="-1">auto-param-search</text>
+    <rect x="66" y="150" width="120" height="5" rx="2.5" fill="url(#accent)"/>
+    <text x="64" y="200" font-size="24" fill="#cbd5e1">目的変数と強く相関する「新しい変数」を数式で自動発見</text>
+    <text x="64" y="240" font-size="18" fill="#64748b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">genetic programming · PySR · CSV / Parquet</text>
+  </g>
+</svg>
