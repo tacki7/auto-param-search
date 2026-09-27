@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0f3b3a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#a3e635"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#2dd4bf"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="300" rx="18" fill="url(#bg)"/>
+
+  <g font-family="-apple-system, 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', Helvetica, Arial, sans-serif" text-anchor="middle">
+    <!-- arrows -->
+    <g stroke="#2dd4bf" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+      <path d="M222 120H262"/>
+      <path d="M462 120H502"/>
+      <path d="M702 120H742"/>
+      <path d="M942 120H982"/>
+      <!-- loop back: evolve -> evaluate -->
+      <path d="M842 170V222H602V174" stroke-dasharray="6 5"/>
+    </g>
+
+    <!-- boxes -->
+    <g fill="#0b1220" stroke="#334155" stroke-width="1.5">
+      <rect x="40" y="70" width="180" height="100" rx="14"/>
+      <rect x="264" y="70" width="196" height="100" rx="14"/>
+      <rect x="982" y="70" width="180" height="100" rx="14"/>
+    </g>
+    <g fill="#0b1220" stroke="url(#accent)" stroke-width="2">
+      <rect x="504" y="70" width="196" height="100" rx="14"/>
+      <rect x="744" y="70" width="196" height="100" rx="14"/>
+    </g>
+
+    <!-- step numbers -->
+    <g font-size="13" fill="#2dd4bf" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+      <text x="130" y="96">01</text><text x="362" y="96">02</text><text x="602" y="96">03</text>
+      <text x="842" y="96">04</text><text x="1072" y="96">05</text>
+    </g>
+
+    <!-- labels -->
+    <g font-size="20" font-weight="700" fill="#f1f5f9">
+      <text x="130" y="128">データ読み込み</text>
+      <text x="362" y="128">式の木を生成</text>
+      <text x="602" y="128">相関 |r| で評価</text>
+      <text x="842" y="128">選択・交叉・変異</text>
+      <text x="1072" y="128">結果を出力</text>
+    </g>
+    <g font-size="14" fill="#94a3b8">
+      <text x="130" y="152">CSV / Parquet の各列</text>
+      <text x="362" y="152">葉 = 列、節 = 演算子</text>
+      <text x="602" y="152">＋ 木の大きさペナルティ</text>
+      <text x="842" y="152">次の世代をつくる</text>
+      <text x="1072" y="152">上位の式 ＋ 数式画像</text>
+    </g>
+
+    <text x="722" y="248" font-size="15" fill="#a3e635">世代数か時間の上限まで繰り返す</text>
+  </g>
+</svg>
