@@ -1,0 +1,14 @@
+# Virtual environments
+.venv*/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# Local Claude settings
+.claude/settings.local.json
+
+# OS / secrets
+.DS_Store
+.env

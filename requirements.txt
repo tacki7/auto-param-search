@@ -1,0 +1,6 @@
+numpy
+pandas
+matplotlib
+# For ga_pysr_search.py (requires Julia, installed automatically by PySR)
+pysr
+sympy
